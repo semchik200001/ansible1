@@ -1,0 +1,4 @@
+[1_sever]
+linux1 ansible_host=194.87.74.28 ansible_user=root ansible_pass=z30r2KYqyg owner=semen_server
+[2_server]
+linux2 ansible_host=194.87.147.96 ansible_user=root ansible_pass=KM0U0hjjty owner=danil_server

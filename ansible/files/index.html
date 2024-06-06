@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audi RS7</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        #main-header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #77aaff 3px solid;
+        }
+        #main-header h1 {
+            text-align: center;
+            text-transform: uppercase;
+            margin: 0;
+            font-size: 24px;
+        }
+        #main-content {
+            margin: 20px 0;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .image {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .image img {
+            max-width: 100%;
+            height: auto;
+        }
+        #footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header id="main-header">
+        <div class="container">
+            <h1>Добро пожаловать на сайт о Audi RS7</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="main-content">
+            <h2>О автомобиле Audi RS7</h2>
+            <p>Audi RS7 - это мощный и стильный автомобиль, который сочетает в себе роскошь и высокие технологии. Его элегантный дизайн и производительность делают его одним из лучших в своем классе.</p>
+            
+            <div class="image">
+                <img src="images/rs7-1.jpg" alt="Audi RS7">
+            </div>
+
+            <h3>Дизайн</h3>
+            <p>Экстерьер Audi RS7 выделяется благодаря спортивному силуэту и агрессивным линиям. Каждый элемент дизайна был тщательно продуман, чтобы создать гармоничный и привлекательный внешний вид.</p>
+            
+            <div class="image">
+                <img src="images/rs7-2.jpg" alt="Дизайн">
+            </div>
+
+            <h3>Производительность</h3>
+            <p>Audi RS7 оснащен мощным двигателем, который обеспечивает впечатляющую динамику и быстроту. Это идеальный автомобиль для тех, кто ценит скорость и комфорт.</p>
+            
+            <div class="image">
+                <img src="images/rs7-3.jpg" alt="Производительность">
+            </div>
+
+            <h3>Технологии</h3>
+            <p>В Audi RS7 используются самые передовые технологии, которые делают вождение безопасным и комфортным. Среди них системы помощи водителю, высококачественная аудиосистема и многое другое.</p>
+            
+            <div class="image">
+                <img src="images/rs7-4.jpg" alt="Технологии">
+            </div>
+        </section>
+    </div>
+    
+    <footer id="footer">
+        <p>Владелец сайта: {{ owner }}</p>
+    </footer>
+</body>
+</html>

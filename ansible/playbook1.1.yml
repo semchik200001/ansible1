@@ -1,0 +1,35 @@
+---
+- name: Deploy Audi RS7 Website
+  hosts: all
+  vars:
+    car_model: "Audi RS7"
+    description: "Audi RS7 - это мощный и стильный автомобиль, который сочетает в себе роскошь и высокие технологии."
+    sections:
+      - title: "Дизайн"
+        content: "Экстерьер Audi RS7 выделяется благодаря спортивному силуэту и агрессивным линиям. Каждый элемент дизайна был тщательно продуман, чтобы создать гармоничный и привлекательный внешний вид."
+        image: "images/rs7-2.jpg"
+      - title: "Производительность"
+        content: "Audi RS7 оснащен мощным двигателем, который обеспечивает впечатляющую динамику и быстроту. Это идеальный автомобиль для тех, кто ценит скорость и комфорт."
+        image: "images/rs7-3.jpg"
+      - title: "Технологии"
+        content: "В Audi RS7 используются самые передовые технологии, которые делают вождение безопасным и комфортным. Среди них системы помощи водителю, высококачественная аудиосистема и многое другое."
+        image: "images/rs7-4.jpg"
+  tasks:
+    - name: Start and enable Nginx
+      systemd:
+        name: nginx
+        state: started
+        enabled: yes
+
+    - name: Create website directory
+      file:
+        path: /var/www/html
+        state: directory
+
+    - name: Deploy index.html
+      template:
+        src: files/index.html
+        dest: /var/www/html/index.html
+        mode: '0644'
+        owner: www-data
+        group: www-data
