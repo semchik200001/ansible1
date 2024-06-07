@@ -1,2 +1,21 @@
 ---
 # tasks file for deploy_apache_web
+   - name: Start and enable Nginx
+      systemd:
+        name: nginx
+        state: started
+        enabled: yes
+
+    - name: Create website directory
+      file:
+        path: /var/www/html
+        state: directory
+
+    - name: Deploy index.html
+      template:
+        src: index.html
+        dest: /var/www/html/index.html
+        mode: '0644'
+        owner: www-data
+        group: www-data
+
