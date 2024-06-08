@@ -1,17 +1,17 @@
 ---
 # tasks file for deploy_apache_web
+   - name: Install NGINX
+      apt:
+        name: nginx
+        state: present
+
    - name: Start and enable Nginx
-      systemd:
+       systemd:
         name: nginx
         state: started
         enabled: yes
-
-    - name: Create website directory
-      file:
-        path: /var/www/html
-        state: directory
-
-    - name: Deploy index.html
+   
+   - name: Deploy index.html
       template:
         src: index.html
         dest: /var/www/html/index.html
